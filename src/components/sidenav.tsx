@@ -1,43 +1,43 @@
 import React from 'react';
 
-// type numberProp = {
-//     count: number
-// }
+type componentProps = {
+    setCount: React.Dispatch<React.SetStateAction<number>>,
+    count: number
+}
 
 type containerProps = {
-    onClick: (event:  any) => any,
-    count: number
+    setCount: React.Dispatch<React.SetStateAction<number>>
 };
 
 
-const NavLink = ({ onClick, count }: containerProps) => {
+const NavLink = ({ setCount, count }: componentProps) => {
     return (
-        <p onClick={onClick}>{ count }</p>
+        <button onClick={ () => setCount(count) }>{ count }</button>
     );
 }
 
 
-const SideNav = ({ onClick, count }: containerProps) => {
+const SideNav = ({ setCount }: containerProps) => {
     return(
         <div>
             <NavLink 
-                onClick={onClick}
+                setCount={setCount}
                 count={1} 
             />
             <NavLink 
-                onClick={onClick}
+                setCount={setCount}
                 count={2} 
             />
             <NavLink 
-                onClick={onClick}
+                setCount={setCount}
                 count={3} 
             />
             <NavLink 
-                onClick={onClick}
+                setCount={setCount}
                 count={4} 
             />
             <NavLink 
-                onClick={onClick}
+                setCount={setCount}
                 count={5} 
             />
         </div>

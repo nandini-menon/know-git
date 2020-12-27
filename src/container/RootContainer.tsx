@@ -8,7 +8,7 @@ const RootContainer = () => {
 
     return (
         <div>
-            <SideNav onClick={() => {setCount(count)} } count={count}/>
+            <SideNav setCount={ setCount }/>
             <Content count={ count } />
         </div>
     );
