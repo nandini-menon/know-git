@@ -1,11 +1,11 @@
 import React from 'react';
 
-type numberProp = {
-    count: number
-}
+// type numberProp = {
+//     count: number
+// }
 
 type containerProps = {
-    onClick: DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>
+    onClick: (event:  any) => any,
     count: number
 };
 
